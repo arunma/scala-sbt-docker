@@ -24,8 +24,5 @@ RUN wget https://dl.bintray.com/sbt/debian/$SBT_DEB_FILE_NAME
 RUN dpkg -i $SBT_DEB_FILE_NAME
 RUN rm -f $SBT_DEB_FILE_NAME
 
-# print versions
-RUN java -version
-
 # fetches all sbt jars from Maven repo so that your sbt will be ready to be used when you launch the image
-RUN sbt --version
+CMD ["bash"]
